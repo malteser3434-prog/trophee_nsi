@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>TERMINAL NASA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="terminal">
+    <div class="header">
+        <span class="btn red"></span>
+        <span class="btn yellow"></span>
+        <span class="btn green"></span>
+        <span class="title">nasa@server:~</span>
+    </div>
+
+    <div class="content">
+        <p><span class="prompt">nasa@server:~$</span> init nasa_API</p>
+        <p>[ OK ] Chargement des clefs de modérateur</p>
+        <p>[ OK ] Accès administrateur détecté</p>
+        <p>[ WARN ] Acces to Web accepted</p>
+        <p><span class="prompt">nasa@server:~$</span> <span class="cursor">█</span></p>
+    </div>
+</div>
+
+</body>
+</html>
