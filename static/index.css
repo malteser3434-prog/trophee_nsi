@@ -1,0 +1,39 @@
+body {
+  background-color: black;
+  color: lime;
+}
+
+.titre {
+  font-family: monospace;
+}
+
+body{ 
+  margin: 0;
+  width: 100vw; 
+  height: 100vh; 
+  background-image: 
+  url("pics/Lyon.png"); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  overflow: hidden;
+}
+
+.porte{
+  position: absolute;
+
+  /* 🎯 Position approximative de la porte */
+  left: 47%;
+  top: 45%;
+
+  /* 🎯 Taille de la zone cliquable */
+  width: 7%;
+  height: 18%;
+
+  /* visible pour réglage */
+  background: rgba(255, 0, 0, 0.4);
+  color: white;
+  text-align: center;
+  line-height: 18vh;
+}
+
