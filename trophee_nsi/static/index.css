@@ -1,0 +1,101 @@
+body {
+  background-color: black;
+  color: lime;
+}
+
+.titre {
+  font-family: monospace;
+}
+
+body{ 
+  margin: 0;
+  width: 100vw; 
+  height: 100vh; 
+  background-image: 
+  url("pics/Lyon.png"); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  overflow: hidden;
+}
+
+.porte{
+  position: absolute;
+
+  /* 🎯 Position approximative de la porte */
+  left: 47%;
+  top: 45%;
+
+  /* 🎯 Taille de la zone cliquable */
+  width: 7%;
+  height: 18%;
+
+  /* visible pour réglage */
+  background: rgba(255, 0, 0, 0.4);
+  color: white;
+  text-align: center;
+  line-height: 18vh;
+}
+
+.notebook-btn {
+      position: fixed;
+      bottom: 0.1%;
+      right: 5%;
+      /*background: #ff0066;*/
+      background: url("pics/mini-clipboard.png");
+      background-size: cover;
+      color: black;
+      border: none;
+      padding: 3% 12%;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 6px;
+}
+
+    /* Carnet */
+.notebook {
+    position: fixed;
+    bottom: 0.1%;
+    right: 0.1%;
+    width: 25%;
+    margin-right: 5%;
+    height: 65%;
+    background: #111;
+    background: url("pics/Clipboard-feuille.png");
+    background-size: 105%;
+    display: none;
+    flex-direction: column;
+    border: #bb00ff;
+    background-repeat: no-repeat  ;
+}
+
+.close-btn {
+  position: absolute;
+  color: white;
+  -webkit-text-stroke: 2.5px black;
+  top: 8%;
+  right: 7%;
+  cursor: pointer;
+  font-size: 250%;
+  user-select: none;
+}
+
+.notebook-text {
+  flex: 1;
+  background: none;
+  overflow: hidden;      /* enlève la barre de défilement */
+  overflow-y: hidden;
+  color: black;
+  margin-top: 31.8%;
+  margin-bottom: 8.7%;
+  margin-left: 15%;
+  margin-right: 13%;
+  line-height: 134.8%;
+  border: none;
+  resize: none;
+  padding: 10px;
+  font-family: monospace;
+  outline: none;
+  background-repeat: no-repeat;
+}
+
