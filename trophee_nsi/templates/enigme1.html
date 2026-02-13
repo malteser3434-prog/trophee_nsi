@@ -14,12 +14,17 @@
     Je suis la réponse à la vie, à l’univers et au reste.
   </p>
 
-  <form method="post">
-    <input type="text" name="reponse">
+  <form method="POST">
+    <input type="text" name="reponse" placeholder="Ta réponse ?">
     <button type="submit">Valider</button>
   </form>
 
-  <p>{{ message }}</p>
+  {% if message %}
+  <p style="color: lime; font-family: monospace; margin-top: 20px;">
+    > {{ message }}
+  </p>
+  {% endif %}
+
 </body>
 
 </html>

@@ -40,7 +40,7 @@ body{
 .notebook-btn {
       position: fixed;
       bottom: 0.1%;
-      right: 5%;
+      right: 0.1%;
       /*background: #ff0066;*/
       background: url("pics/mini-clipboard.png");
       background-size: cover;
@@ -58,9 +58,8 @@ body{
     bottom: 0.1%;
     right: 0.1%;
     width: 25%;
-    margin-right: 5%;
-    height: 65%;
-    background: #111;
+    height: 55%;
+    /*background: #111;*/
     background: url("pics/Clipboard-feuille.png");
     background-size: 105%;
     display: none;
@@ -99,3 +98,21 @@ body{
   background-repeat: no-repeat;
 }
 
+.mission-hud {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.8); /* Fond noir bien sombre */
+    color: #00ff00; /* Vert lime */
+    padding: 15px;
+    border: 1px solid lime; /* Encadré vert */
+    font-family: monospace; /* Style console de code */
+    font-size: 14px;
+    z-index: 999;
+    pointer-events: none; /* Pour que le bloc ne bloque pas les clics derrière lui */
+}
+
+.mission-hud p {
+    margin: 5px 0; /* Espace entre les lignes */
+    text-transform: uppercase; /* Tout en majuscules pour le style mission */
+}
