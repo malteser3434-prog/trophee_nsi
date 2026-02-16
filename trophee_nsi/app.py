@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, session
 
 app = Flask(__name__)
 
@@ -13,6 +13,10 @@ def chemin():
 @app.route('/front_eglise')
 def front_eglise():
     return render_template('front_eglise.html')
+
+@app.route('/in_eglise')
+def in_eglise():
+    return render_template('in_eglise.html')
 
 @app.route("/enigme1", methods=["GET", "POST"])
 def enigme1():
@@ -32,3 +36,15 @@ def enigme1():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+@app.route('/ramasser/<item>')
+def ramasser(item):
+    if 'inventory' not in session:
+        session['inventory'] = []
+    
+    inventory = session['inventory']
+    if item not in inventory:
+        inventory.append(item)
+        session['inventory'] = inventory # Crucial pour Flask
+    
+    return {"status": "ok", "inventory": session['inventory']}

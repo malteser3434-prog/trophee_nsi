@@ -3,13 +3,21 @@
 <head>
   <meta charset="utf-8">
   <title>ARG - Accueil</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='front_eglise.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='in_eglise.css') }}">
 
 </head>
 
 <body>
 
-  <a href="/in_eglise" class="in-eglise">in-eglise</a>
+  <div class="game-container">
+    <img id="background-img"
+      src="{{ url_for('static', filename='pics/' + ('in_eglise_px_no_clipboard.png' if 'clipboard' in session.get('inventory', []) else 'in_eglise_px.png')) }}"
+      data-empty="{{ url_for('static', filename='pics/in_eglise_px_no_clipboard.png') }}">
+
+    {% if 'clipboard' not in session.get('inventory', []) %}
+    <div id="clip-eglise" class="objet-interactif" onclick="ramasserObjet('clipboard')"></div>
+    {% endif %}
+  </div>
 
   <!-- HUD -->
 

@@ -27,3 +27,29 @@ textarea.addEventListener("input", () => {
   // Sauvegarde
   localStorage.setItem("notebook", textarea.value);
 });
+
+
+function ramasserObjet(nomObjet) {
+    const bg = document.getElementById('background-img');
+    
+    // On récupère le chemin généré par Flask qui est stocké dans le "data-empty"
+    const imageVide = bg.getAttribute('data-empty');
+    
+    // On change l'image
+    if (imageVide) {
+        bg.src = imageVide;
+    }
+
+    // On fait disparaître l'objet (via sa classe ou son ID)
+    const objet = document.getElementById('clip-eglise');
+    if (objet) {
+        objet.style.display = 'none';
+    }
+
+    // Appel à Flask pour l'inventaire
+    fetch('/ramasser/' + nomObjet)
+        .then(response => response.json())
+        .then(data => {
+            console.log("Inventaire mis à jour", data.inventory);
+        });
+}
