@@ -6,6 +6,14 @@ app = Flask(__name__)
 def accueil():
     return render_template("index.html")
 
+@app.route('/chemin')
+def chemin():
+    return render_template('chemin.html')
+
+@app.route('/front_eglise')
+def front_eglise():
+    return render_template('front_eglise.html')
+
 @app.route("/enigme1", methods=["GET", "POST"])
 def enigme1():
     message = ""
