@@ -9,7 +9,8 @@ tags: trophées NSI, lycée
 ## 📝 Description
 
 Notre projet est un arg. Son objectif est de proposer une expérience unique au joueur. Mais à travers cette expérience, notre équipe veut passer un message fort, celui d'un monde au bord du gouffre. On laisse au joueur une vision personnelle de notre seul et unique monde, détruit par les plus grands.
-On a choisit ce projet, car ce sujet nous tient à coeur.
+A chaque seconde de nos vies, des personnes meurent, ou doivent quitter leurs terres natales à cause de changement climatique. Et à coté de cela, les plus grand de ce monde, s'acharnent à le détruire pour leurs intérêts personnels.
+Il répond aux critères d'originalité des Trophées NSI, car il traite de l'environnement, mais est surtout original.
 - Quel est l'objectif ?
 - Pourquoi avez-vous choisi ce sujet ?
 - En quoi répond-il aux critères d'originalité ou d'utilité des Trophées NSI ?
