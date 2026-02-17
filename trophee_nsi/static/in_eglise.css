@@ -30,10 +30,9 @@ body{
       display: none;
       position: fixed;
       bottom: 0.1%;
-      right: 0.1%;
-      background: #ff0066;
+      right: 1%;
+      /*background: #ff0066;*/
       background: url("pics/mini-clipboard.png");
-      background-size: 90%;
       background-size: cover;
       color: black;
       border: none;
@@ -41,7 +40,7 @@ body{
       cursor: pointer;
       font-weight: bold;
       border-radius: 6px;
-
+      width: 11%;
 }
 
 .notebook-btn.visible {
