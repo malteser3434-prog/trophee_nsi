@@ -31,7 +31,6 @@
     <p>LIEU : Lyon - Les Alentours</p>
   </div>
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
   <button class="notebook-btn {% if 'clipboard' not in session.get('inventory', []) %}hidden{% endif %}">
     <img src="{{ url_for('static', filename='pics/mini-clipboard.png') }}" style="width: 50px;">
   </button>

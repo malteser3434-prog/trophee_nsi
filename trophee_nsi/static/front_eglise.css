@@ -113,7 +113,3 @@ body{
     text-transform: uppercase; /* Tout en majuscules pour le style mission */
 }
 
-.hidden {
-    display: none !important;
-}
-

@@ -19,17 +19,14 @@
     <p>LIEU : Lyon - Les Alentours</p>
   </div>
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
-  {% if 'clipboard' in session.get('inventory', []) %}
   <button class="notebook-btn">
     <img src="{{ url_for('static', filename='pics/mini-clipboard.png') }}" style="width: 50px;">
   </button>
 
   <div class="notebook" style="display: none;">
     <div class="close-btn">✖</div>
-    <textarea class="notebook-text"></textarea>
+    <textarea class="notebook-text" placeholder="Écris ici tes pistes..."></textarea>
   </div>
-  {% endif %}
 
   <!-- JS Flask -->
   <script src="{{ url_for('static', filename='scripts.js') }}"></script>
