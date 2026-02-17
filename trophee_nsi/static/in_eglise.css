@@ -10,6 +10,19 @@ body{
   overflow: hidden;
 }
 
+.front-eglise{
+  position: absolute;
+  left: 30%;
+  bottom: 2% !important;
+  width: 40%;
+  height: 13%;
+  background: rgba(255, 0, 0, 0.4);
+  color: white;
+  text-align: center;
+  line-height: 18vh;
+
+}
+
 .in-eglise{
   position: absolute;
 
@@ -29,11 +42,13 @@ body{
 }
 
 .notebook-btn {
+      display: none;
       position: fixed;
       bottom: 0.1%;
       right: 0.1%;
-      /*background: #ff0066;*/
+      background: #ff0066;
       background: url("pics/mini-clipboard.png");
+      background-size: 90%;
       background-size: cover;
       color: black;
       border: none;
@@ -41,6 +56,12 @@ body{
       cursor: pointer;
       font-weight: bold;
       border-radius: 6px;
+
+}
+
+.notebook-btn.visible {
+    display: block !important;
+
 }
 
     /* Carnet */
@@ -125,4 +146,8 @@ body{
     left: 52%;
     width: 8%;
     height: 12%;
+}
+
+.hidden {
+    display: none !important;
 }

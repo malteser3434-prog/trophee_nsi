@@ -29,6 +29,7 @@ body{
 }
 
 .notebook-btn {
+      display: none;
       position: fixed;
       bottom: 0.1%;
       right: 0.1%;
@@ -41,6 +42,10 @@ body{
       cursor: pointer;
       font-weight: bold;
       border-radius: 6px;
+}
+
+.notebook-btn.visible {
+    display: block !important;
 }
 
     /* Carnet */
@@ -107,3 +112,8 @@ body{
     margin: 5px 0; /* Espace entre les lignes */
     text-transform: uppercase; /* Tout en majuscules pour le style mission */
 }
+
+.hidden {
+    display: none !important;
+}
+

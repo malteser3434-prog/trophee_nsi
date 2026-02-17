@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 
 app = Flask(__name__)
+app.secret_key
 
 @app.route("/")
 def accueil():
@@ -12,11 +13,17 @@ def chemin():
 
 @app.route('/front_eglise')
 def front_eglise():
-    return render_template('front_eglise.html')
+    # On récupère l'inventaire pour que Jinja sache s'il doit afficher le bouton
+    inventory = session.get('inventory', [])
+    return render_template('front_eglise.html', inventory=inventory)
 
 @app.route('/in_eglise')
 def in_eglise():
-    return render_template('in_eglise.html')
+    # On récupère l'inventaire ou une liste vide si rien n'existe
+    inventory = session.get('inventory', [])
+    
+    # On envoie l'info au HTML
+    return render_template('in_eglise.html', inventory=inventory)
 
 @app.route("/enigme1", methods=["GET", "POST"])
 def enigme1():
@@ -42,9 +49,11 @@ def ramasser(item):
     if 'inventory' not in session:
         session['inventory'] = []
     
-    inventory = session['inventory']
-    if item not in inventory:
-        inventory.append(item)
-        session['inventory'] = inventory # Crucial pour Flask
+    # On crée une copie, on ajoute, et on réassigne (obligatoire pour Flask)
+    inv = list(session['inventory'])
+    if item not in inv:
+        inv.append(item)
+        session['inventory'] = inv 
+        session.modified = True # Force la sauvegarde immédiate
     
     return {"status": "ok", "inventory": session['inventory']}

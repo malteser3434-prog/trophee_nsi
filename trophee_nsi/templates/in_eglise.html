@@ -8,16 +8,20 @@
 </head>
 
 <body>
-
+  <a href="/front_eglise" class="front-eglise">front_eglise</a>
   <div class="game-container">
     <img id="background-img"
-      src="{{ url_for('static', filename='pics/' + ('in_eglise_px_no_clipboard.png' if 'clipboard' in session.get('inventory', []) else 'in_eglise_px.png')) }}"
+      src="{{ url_for('static', filename='pics/' + ('in_eglise_px_no_clipboard.png' if 'clipboard' in session else 'in_eglise_px.png')) }}"
       data-empty="{{ url_for('static', filename='pics/in_eglise_px_no_clipboard.png') }}">
 
     {% if 'clipboard' not in session.get('inventory', []) %}
     <div id="clip-eglise" class="objet-interactif" onclick="ramasserObjet('clipboard')"></div>
     {% endif %}
   </div>
+
+  <button class="notebook-btn {% if 'clipboard' not in session.get('inventory', []) %}hidden{% endif %}">
+    <img src="{{ url_for('static', filename='pics/mini-clipboard.png') }}" style="width: 50px;">
+  </button>
 
   <!-- HUD -->
 
@@ -28,12 +32,13 @@
   </div>
 
   <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
-  <button class="notebook-btn"></button>
+  <button class="notebook-btn {% if 'clipboard' not in session.get('inventory', []) %}hidden{% endif %}">
+    <img src="{{ url_for('static', filename='pics/mini-clipboard.png') }}" style="width: 50px;">
+  </button>
 
-  <!-- Carnet -->
-  <div class="notebook">
+  <div class="notebook" style="display: none;">
     <div class="close-btn">✖</div>
-    <textarea class="notebook-text" placeholder="Écris ici tes pistes..."></textarea>
+    <textarea class="notebook-text"></textarea>
   </div>
 
   <!-- JS Flask -->
