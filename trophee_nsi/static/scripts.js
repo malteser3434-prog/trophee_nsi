@@ -107,3 +107,9 @@ function initialiserCarnet() {
         };
     }
 }
+
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.has('reset')) {
+    localStorage.clear();
+    window.location.href = "/"; // On recharge proprement sans le paramètre
+}
