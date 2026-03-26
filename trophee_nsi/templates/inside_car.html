@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Car</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='inside_car.css') }}">
+</head>
+
+<body>
+  <h1 class="titre">Énigme 1</h1>
+
+  <p>
+    Je suis la réponse à la vie, à l’univers et au reste.
+  </p>
+
+  <form method="POST">
+    <input type="text" name="reponse" placeholder="Ta réponse ?">
+    <button type="submit">Valider</button>
+  </form>
+
+  {% if message %}
+  <p style="color: lime; font-family: monospace; margin-top: 20px;">
+    > {{ message }}
+  </p>
+  {% endif %}
+
+</body>
+
+</html>

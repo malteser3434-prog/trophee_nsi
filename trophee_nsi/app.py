@@ -3,9 +3,10 @@ from flask import Flask, render_template, request, redirect, url_for, session
 app = Flask(__name__)
 app.secret_key
 
+
 @app.route("/")
-def accueil():
-    return render_template("index.html")
+def view():
+    return render_template("view.html")
 
 @app.route('/chemin')
 def chemin():
@@ -25,8 +26,15 @@ def in_eglise():
     # On envoie l'info au HTML
     return render_template('in_eglise.html', inventory=inventory)
 
-@app.route("/enigme1", methods=["GET", "POST"])
+@app.route("/enigme1")
 def enigme1():
+    inventory = session.get('inventory', [])
+    return render_template('enigme1.html', inventory=inventory)
+
+
+
+@app.route('/inside_car', methods=["GET", "POST"])
+def inside_car():
     message = ""
     if request.method == "POST":
         # .strip() enlève les espaces en trop si le joueur en met par erreur
@@ -35,14 +43,11 @@ def enigme1():
         if reponse == "42":
             # Au lieu d'un message, on peut aussi rediriger directement :
             # return redirect(url_for('index')) 
-            return redirect(url_for('accueil'))
+            return redirect(url_for('in_eglise'))
         else:
             message = "Mauvaise réponse, cherche encore..."
             
-    return render_template('enigme1.html', message=message)
-
-if __name__ == "__main__":
-    app.run(debug=True)
+    return render_template('inside_car.html', message=message)
 
 @app.route('/ramasser/<item>')
 def ramasser(item):
@@ -57,3 +62,6 @@ def ramasser(item):
         session.modified = True # Force la sauvegarde immédiate
     
     return {"status": "ok", "inventory": session['inventory']}
+
+if __name__ == "__main__":
+    app.run(debug=True)

@@ -1,0 +1,31 @@
+body{ 
+  margin: 0;
+  width: 100vw; 
+  height: 100vh; 
+  background-image: 
+  url("pics/inside_car.png"); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  overflow: hidden;
+}
+
+.titre {
+  font-family: monospace;
+}
+
+.notebook-btn {
+      display: none;
+      position: fixed;
+      right: 1%;
+      /*background: #ff0066;*/
+      background: url("pics/mini-clipboard.png");
+      background-size: cover;
+      color: black;
+      border: none;
+      padding: 3% 12%;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 6px;
+      width: 11%;
+}
