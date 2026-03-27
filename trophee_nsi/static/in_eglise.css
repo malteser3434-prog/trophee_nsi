@@ -128,8 +128,7 @@ body {
 #clip-eglise {
     cursor: pointer;
     position: absolute;
-    background-color:rgba(255, 0, 0, 0.4);
-    top: 48%;
+    top: 62%;
     left: 40%;
     width: 8%;
     height: 12%;

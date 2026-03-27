@@ -10,6 +10,12 @@
   </head>
 
   <body>
+    <div class="mission-hud">
+      <p>DATE : 12/02/2026</p>
+      <p>HEURE : 10:50</p>
+      <p>LIEU : Lyon - Place centrale</p>
+    </div>
+
     <div class="conteneur-enigme">
       <h1 class="titre">Direction</h1>
 
@@ -31,5 +37,23 @@
         votre voyage.
       </a>
     </div>
+
+    <button class="notebook-btn">
+      <img
+        src="{{ url_for('static', filename='pics/mini-clipboard.png') }}"
+        style="width: 50px"
+      />
+    </button>
+
+    <div class="notebook" style="display: none">
+      <div class="close-btn">✖</div>
+      <textarea
+        class="notebook-text"
+        placeholder="Écris ici tes pistes..."
+      ></textarea>
+    </div>
+
+    <!-- JS Flask -->
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
   </body>
 </html>

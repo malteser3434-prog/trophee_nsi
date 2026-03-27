@@ -22,10 +22,23 @@ body{
   height: 75%;
 
   /* visible pour réglage */
-  background: rgba(255, 0, 0, 0.4);
+  
   color: white;
   text-align: center;
   line-height: 18vh;
+}
+
+.front-eglise{
+  position: absolute;
+  left: 30%;
+  bottom: 2% !important;
+  width: 40%;
+  height: 13%;
+  
+  color: white;
+  text-align: center;
+  line-height: 18vh;
+
 }
 
 .notebook-btn {

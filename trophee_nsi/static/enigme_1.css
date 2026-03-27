@@ -40,7 +40,7 @@ body{
   height: 25%;
 
   /* visible pour réglage */
-  background: rgba(255, 0, 0, 0.4);
+  
   color: white;
   text-align: center;
   line-height: 18vh;
@@ -111,4 +111,18 @@ body{
   font-family: monospace;
   outline: none;
   background-repeat: no-repeat;
+}
+
+.mission-hud {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.8); /* Fond noir bien sombre */
+    color: #00ff00; /* Vert lime */
+    padding: 15px;
+    border: 1px solid lime; /* Encadré vert */
+    font-family: monospace; /* Style console de code */
+    font-size: 14px;
+    z-index: 999;
+    pointer-events: none; /* Pour que le bloc ne bloque pas les clics derrière lui */
 }

@@ -10,22 +10,17 @@ body{
   overflow: hidden;
 }
 
-.in-eglise{
+.poubelle{
   position: absolute;
-
-  /* 🎯 Position approximative de la porte */
-  left: 5%;
-  top: 5%;
-
-  /* 🎯 Taille de la zone cliquable */
-  width: 90%;
-  height: 75%;
-
-  /* visible pour réglage */
-  background: rgba(255, 0, 0, 0.4);
+  left: 30%;
+  bottom: 2% !important;
+  width: 40%;
+  height: 13%;
+  
   color: white;
   text-align: center;
   line-height: 18vh;
+
 }
 
 .notebook-btn {

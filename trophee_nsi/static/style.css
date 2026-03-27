@@ -72,7 +72,6 @@ body::before {
   font-size: 0.8rem;
   color: #00ff41;
   background: rgba(0, 0, 0, 0.7);
-  border: 1px solid #00ff41;
   padding: 0.4rem 1rem;
   margin-bottom: 3rem;
   align-self: flex-start;
