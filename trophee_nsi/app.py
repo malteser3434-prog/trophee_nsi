@@ -1,10 +1,13 @@
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, jsonify, render_template, request, redirect, url_for, session
 
 app = Flask(__name__)
 app.secret_key
 
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-@app.route("/")
+@app.route("/view")
 def view():
     return render_template("view.html")
 
@@ -40,14 +43,24 @@ def inside_car():
         # .strip() enlève les espaces en trop si le joueur en met par erreur
         reponse = request.form.get("reponse").strip() 
         
-        if reponse == "42":
+        if reponse == "45° 50′ 59″ nord, 4° 46′ 26″ est":
             # Au lieu d'un message, on peut aussi rediriger directement :
             # return redirect(url_for('index')) 
-            return redirect(url_for('in_eglise'))
+            return redirect(url_for('in_car_front_base'))
         else:
             message = "Mauvaise réponse, cherche encore..."
             
     return render_template('inside_car.html', message=message)
+
+@app.route("/in_car_front_base")
+def in_car_front_base():
+    inventory = session.get('inventory', [])
+    return render_template('in_car_front_base.html', inventory=inventory)
+
+@app.route("/front_base")
+def front_base():
+    inventory = session.get('inventory', [])
+    return render_template('front_base.html', inventory=inventory)
 
 @app.route('/ramasser/<item>')
 def ramasser(item):
@@ -62,6 +75,14 @@ def ramasser(item):
         session.modified = True # Force la sauvegarde immédiate
     
     return {"status": "ok", "inventory": session['inventory']}
+
+ACCES_REFUSE = True
+@app.route('/verifier_barriere')
+def verifier_barriere():
+    if ACCES_REFUSE:
+        return jsonify(message="ACCÈS REFUSÉ", statut="erreur")
+    else:
+        return jsonify(message="ACCÈS AUTORISÉ : Bienvenue !", statut="succes")
 
 if __name__ == "__main__":
     app.run(debug=True)

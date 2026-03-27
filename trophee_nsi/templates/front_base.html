@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Car</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='front_base.css') }}"
+    />
+  </head>
+
+  <body>
+    <div>
+      <h2>Système de Sécurité de la Barrière</h2>
+
+      <button onclick="checkAcces()">Actionner la barrière</button>
+
+      <p id="affichage-resultat"></p>
+
+      <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+    </div>
+  </body>
+</html>

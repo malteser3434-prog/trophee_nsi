@@ -3,7 +3,7 @@ body{
   width: 100vw; 
   height: 100vh; 
   background-image: 
-  url("pics/inside_car.png"); 
+  url("pics/photo_portail_ferme.png"); 
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
@@ -78,3 +78,13 @@ body{
     font-family: monospace; 
     margin-top: 20px;
   }
+
+  .erreur {
+    color: #ff4d4d; /* Rouge */
+    font-weight: bold;
+}
+
+.succes {
+    color: #4dff88; /* Vert */
+    font-weight: bold;
+}
