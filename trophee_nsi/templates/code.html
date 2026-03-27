@@ -5,19 +5,19 @@
     <title>Car</title>
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='inside_car.css') }}"
+      href="{{ url_for('static', filename='code.css') }}"
     />
   </head>
 
   <body>
     <div class="conteneur-enigme">
-      <h1 class="titre">Direction</h1>
+      <h1 class="titre">Code</h1>
 
-      <p>Entre les coordonnées de votre destination.</p>
+      <p>Entre le code a 5 chiffres</p>
 
       <form method="POST">
         <input type="text" name="reponse" placeholder="Ta réponse ?" />
-        <button type="submit">Valider</button>
+        <button class="valider" type="submit">Valider</button>
       </form>
 
       {% if message %}
@@ -25,11 +25,6 @@
       {% endif %}
     </div>
 
-    <div id="interractions">
-      <a>
-        Veuillez entrer les coordonnées de votre destination pour continuer
-        votre voyage.
-      </a>
-    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
   </body>
 </html>

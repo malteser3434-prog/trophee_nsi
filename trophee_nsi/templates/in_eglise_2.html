@@ -3,13 +3,24 @@
 <head>
   <meta charset="utf-8">
   <title>ARG - Accueil</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='front_eglise.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='in_eglise.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
 </head>
 
 <body>
 
-  <a href="/in_eglise_2" class="in-eglise">in-eglise</a>
+  <a href="/in_eglise_clipboard" class="in-eglise">clipboard</a>
+
+  <div class="game-container">
+
+    {% if 'clipboard' not in session.get('inventory', []) %}
+    <div id="clip-eglise" class="objet-interactif" onclick="ramasserObjet('clipboard'); window.location.href='{{ url_for('in_eglise_clip') }}';"></div>
+    {% endif %}
+  </div>
+
+  <button  class="notebook-btn {% if 'clipboard' not in session.get('inventory', []) %}hidden{% endif %}">
+    <img src="{{ url_for('static', filename='pics/mini-clipboard.png') }}" style="width: 50px;">
+  </button>
 
   <div class="mission-hud">
     <p>DATE : 11/02/2026</p>

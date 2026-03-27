@@ -2,8 +2,7 @@ body{
   margin: 0;
   width: 100vw; 
   height: 100vh; 
-  background-image: 
-  url("pics/photo_portail_ferme.png"); 
+  background-image: url("/static/pics/code.png") !important; 
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
@@ -53,8 +52,8 @@ body{
 .conteneur-enigme {
     /* --- C'EST ICI QUE TU CHANGES LA POSITION --- */
     position: absolute; 
-    top: 40%;  /* Ajuste la distance du haut (ex: 50px, 20%, etc.) */
-    left: 55%; /* Ajuste la distance de la gauche */
+    top: 75%;  /* Ajuste la distance du haut (ex: 50px, 20%, etc.) */
+    left: 42%; /* Ajuste la distance de la gauche */
     /* -------------------------------------------- */
 
     background-color: rgba(26, 26, 26, 0.9);
@@ -109,4 +108,12 @@ body{
 .fence:focus {
   box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
   outline: 0;
+}
+
+.valider{
+   position: absolute; 
+    top: 27%;  /* Ajuste la distance du haut (ex: 50px, 20%, etc.) */
+    right: 1%;
+    width: 20%;
+    height: 24%;
 }

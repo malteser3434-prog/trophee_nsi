@@ -21,13 +21,19 @@ def front_eglise():
     inventory = session.get('inventory', [])
     return render_template('front_eglise.html', inventory=inventory)
 
-@app.route('/in_eglise')
-def in_eglise():
+@app.route('/in_eglise_2')
+def in_eglise_2():
     # On récupère l'inventaire ou une liste vide si rien n'existe
     inventory = session.get('inventory', [])
     
     # On envoie l'info au HTML
-    return render_template('in_eglise.html', inventory=inventory)
+    return render_template('in_eglise_2.html', inventory=inventory)
+
+@app.route('/in_eglise_clip')
+def in_eglise_clip():
+    # On récupère l'inventaire pour que Jinja sache s'il doit afficher le bouton
+    inventory = session.get('inventory', [])
+    return render_template('in_eglise_clip.html', inventory=inventory)
 
 @app.route("/enigme1")
 def enigme1():
@@ -62,6 +68,52 @@ def front_base():
     inventory = session.get('inventory', [])
     return render_template('front_base.html', inventory=inventory)
 
+@app.route("/front_base_open")
+def front_base_open():
+    inventory = session.get('inventory', [])
+    return render_template('front_base_open.html', inventory=inventory)
+
+@app.route("/front_batiment")
+def front_batiment():
+    inventory = session.get('inventory', [])
+    return render_template('front_batiment.html', inventory=inventory)
+
+@app.route("/trash")
+def trash():
+    inventory = session.get('inventory', [])
+    return render_template('trash.html', inventory=inventory)
+
+@app.route("/code", methods=["GET", "POST"])
+def code():
+    message = ""
+    if request.method == "POST":
+        # .strip() enlève les espaces en trop si le joueur en met par erreur
+        reponse = request.form.get("reponse").strip() 
+        
+        if reponse == "69000":
+            # Au lieu d'un message, on peut aussi rediriger directement :
+            # return redirect(url_for('index')) 
+            return redirect(url_for('ia'))
+        else:
+            message = "Mauvaise réponse, cherche encore..."
+            
+    return render_template('code.html', message=message)
+
+@app.route("/ia")
+def ia():
+    inventory = session.get('inventory', [])
+    return render_template('ia.html', inventory=inventory)
+
+@app.route("/fin_destruction")
+def fin_destruction():
+    inventory = session.get('inventory', [])
+    return render_template('fin_destruction.html', inventory=inventory)
+
+@app.route("/fin_usb")
+def fin_usb():
+    inventory = session.get('inventory', [])
+    return render_template('fin_usb.html', inventory=inventory)
+
 @app.route('/ramasser/<item>')
 def ramasser(item):
     if 'inventory' not in session:
@@ -76,13 +128,13 @@ def ramasser(item):
     
     return {"status": "ok", "inventory": session['inventory']}
 
-ACCES_REFUSE = True
+ACCES_REFUSE = False
 @app.route('/verifier_barriere')
 def verifier_barriere():
     if ACCES_REFUSE:
         return jsonify(message="ACCÈS REFUSÉ", statut="erreur")
     else:
-        return jsonify(message="ACCÈS AUTORISÉ : Bienvenue !", statut="succes")
+        return jsonify(statut="succes", url=url_for('front_base_open'))
 
 if __name__ == "__main__":
     app.run(debug=True)

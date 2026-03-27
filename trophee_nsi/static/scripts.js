@@ -113,15 +113,28 @@ if (urlParams.has("reset")) {
   window.location.href = "/"; // On recharge proprement sans le paramètre
 }
 
+// le reset : http://127.0.0.1:5000/view?reset=1
+
 let accessRefused = true;
 
 function checkAcces() {
-  // On appelle la route Python /verifier_barriere
   fetch("/verifier_barriere")
     .then((response) => response.json())
     .then((data) => {
-      const resultDiv = document.getElementById("affichage-resultat");
-      resultDiv.innerText = data.message;
-      resultDiv.className = data.statut; // Applique le rouge ou le vert
+      if (data.statut === "succes") {
+        // REDIRECTION AUTOMATIQUE
+        window.location.href = data.url;
+      } else {
+        const resultDiv = document.getElementById("affichage-resultat");
+        if (resultDiv) {
+          resultDiv.innerText = data.message;
+          resultDiv.className = "erreur";
+        }
+      }
     });
+}
+
+function clicSurClipboard() {
+  ramasserObjet("clipboard");
+  window.location.href = "/in_eglise_clip"; // Route Flask directe
 }

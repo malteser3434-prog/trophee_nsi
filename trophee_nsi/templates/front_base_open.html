@@ -3,19 +3,17 @@
 <head>
   <meta charset="utf-8">
   <title>ARG - Accueil</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='view.css') }}">
-
+  <link rel="stylesheet" href="{{ url_for('static', filename='front_base_open.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
 </head>
 
 <body>
 
-  <a href="/chemin" class="chemin">chemin</a>
-
-  <!-- HUD -->
+  <a href="/front_batiment" class="in-eglise">rentrer</a>
 
   <div class="mission-hud">
-    <p>DATE : 11/02/2076</p>
-    <p>HEURE : 18:47</p>
+    <p>DATE : 11/02/2026</p>
+    <p>HEURE : 19:57</p>
     <p>LIEU : Lyon - Les Alentours</p>
   </div>
 
@@ -28,7 +26,6 @@
     <textarea class="notebook-text" placeholder="Écris ici tes pistes..."></textarea>
   </div>
 
-  <!-- JS Flask -->
   <script src="{{ url_for('static', filename='scripts.js') }}"></script>
 
 </body>

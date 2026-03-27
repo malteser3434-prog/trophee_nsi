@@ -1,33 +1,50 @@
 
-body { 
+body{ 
   margin: 0;
   width: 100vw; 
   height: 100vh; 
-  /* On définit l'image séparément du reste */
-  background-image: url("/static/pics/in_eglise_px.png");
+  background-image: url("/static/pics/ia.png") !important; 
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
-  background-attachment: fixed; /* Optionnel : bloque l'image si tu as du scroll */
   overflow: hidden;
 }
 
-
-
-.front-eglise{
+.poubelle{
   position: absolute;
-  left: 30%;
-  bottom: 2% !important;
-  width: 40%;
-  height: 13%;
+
+  /* 🎯 Position approximative de la porte */
+  left: 68%;
+  top: 55%;
+
+  /* 🎯 Taille de la zone cliquable */
+  width: 15%;
+  height: 20%;
+
+  /* visible pour réglage */
   background: rgba(255, 0, 0, 0.4);
   color: white;
   text-align: center;
   line-height: 18vh;
-
 }
 
+.code{
+  position: absolute;
 
+  /* 🎯 Position approximative de la porte */
+  left: 45%;
+  top: 75%;
+
+  /* 🎯 Taille de la zone cliquable */
+  width: 10%;
+  height: 20%;
+
+  /* visible pour réglage */
+  background: rgba(255, 0, 0, 0.4);
+  color: white;
+  text-align: center;
+  line-height: 18vh;
+}
 
 .notebook-btn {
       display: none;
@@ -48,7 +65,6 @@ body {
 
 .notebook-btn.visible {
     display: block !important;
-
 }
 
     /* Carnet */
@@ -114,24 +130,5 @@ body {
 .mission-hud p {
     margin: 5px 0; /* Espace entre les lignes */
     text-transform: uppercase; /* Tout en majuscules pour le style mission */
-}
-
-
-
-#background-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-/* La position spécifique du clipboard dans l'église */
-#clip-eglise {
-    cursor: pointer;
-    position: absolute;
-    background-color:rgba(255, 0, 0, 0.4);
-    top: 48%;
-    left: 40%;
-    width: 8%;
-    height: 12%;
 }
 
