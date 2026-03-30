@@ -40,6 +40,10 @@ Une seconde difficulté a concerné la conception des énigmes elles-mêmes comm
 
 La principale difficulté a été la gestion de l'état du jeu côté serveur. L'utilisation de Flask était une première pour nous et cela nous as demandé un temps d'adaptation pour bien tout comprendre pas seulement avoir quelque chose de fonctionnel.  
 
+**Part de l'IA et création originale (oui/non):**
+
+Le projet est une création originale malheureusement pas aussi aboutie que nous l'aurions souhaité (lore, éngimes...) mais qui reste une expérience que nous trouvons divertissante et qui apporte un peu de fraicheur. Nous avons eu recours à l'Intelligence artifiecelle pour la création de certaines images, certaines ont etes pyxelisées pour reduire un peu la generation d'image couteuse en eau/éléctricité. L'IA n'a pas été un outil créatif dans le sens de l'histoire ou des énigmes mais nous as servis pour generer du code et optimiser notre temps. De ce fait, nous estimons la part de l'IA dans notre projet de 40 %.
+
 **Ouverture**
 
 De nombreuses pistes d'amélioration sont envisageables. L'ajout d'une bande sonore d'ambiance renforcerait l'immersion (Nous en avions une composée par corto mais qui ne correspondait pas vraiment à l'ambiance). Nous aimeriont également mettre un système de sauvegarde de progression pour permettre permettant au joueur de reprendre sa partie. Enfin, davantage de scènes intermédiaires, d'énigmes et d'objets ramassables enrichiraient énormément la narration et allongeraient l'expérience de jeu comme prévu au départ.
