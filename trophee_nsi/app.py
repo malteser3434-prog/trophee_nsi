@@ -128,7 +128,7 @@ def ramasser(item):
     
     return {"status": "ok", "inventory": session['inventory']}
 
-ACCES_REFUSE = False
+ACCES_REFUSE = True
 @app.route('/verifier_barriere')
 def verifier_barriere():
     if ACCES_REFUSE:
