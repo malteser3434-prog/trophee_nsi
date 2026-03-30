@@ -13,12 +13,6 @@ A chaque seconde de nos vies, des personnes meurent, ou doivent quitter leurs te
 Il répond aux critères d'originalité des Trophées NSI, car il traite de l'environnement, et mobilise la curiosité du joueur dans une experience que nous pensons peu commune. 
 
 
-## 👥 L'Équipe
-
-- **Vuadelle Corto** (@malteser3434-prog) : Responsable Images + Histoire 
-- **Damon Alexandre** (@alexdam34) : Responsable Enigmes + Code Flask 
-- **Léonard Sacha** (@TaLeon-gg) : Responsable Code HTML/CSS 
-- Tous les membres de l'équipe ont étés très polyvalents, nous avons tous chacun travaillé sur le code, l'histoire, les éngimes ou les images. Ceci ,'est qu'une répartition qui tient compte du temps que chacun a consacré à un ou plusieurs rôles mais ne représente pas vraiment l'investissement global. 
 
 ## 🛠️ Aspects Techniques (Spécificités NSI)
 
@@ -36,7 +30,7 @@ Cette section est cruciale pour le jury. Expliquez comment vous avez utilisé le
 
 Expliquez comment tester votre projet :
 
-1. **Prérequis :** Navigateur, accès au web, accès au fichier du jeu
+1. **Prérequis :** Navigateur, accès au web, accès au fichier du jeu, python et Flask
 2. **Installation des dépendances :** `pip install -r requirements.txt`
 3. **Lancement :** `python main.py`
 
@@ -44,12 +38,6 @@ Expliquez comment tester votre projet :
 
 Le projet est une création originale malheureusement pas aussi aboutie que nous l'aurions souhaité (lore, éngimes...) mais qui reste une expérience que nous trouvons divertissante et qui apporte un peu de fraicheur. Nous avons eu recours à l'Intelligence artifiecelle pour la création de certaines images, certaines ont etes pyxelisées pour reduire un peu la generation d'image couteuse en eau/éléctricité. L'IA n'a pas été un outil créatif dans le sens de l'histoire ou des énigmes mais nous as servis pour generer du code et optimiser notre temps. De ce fait, nous estimons la part de l'IA dans notre projet de 40 %. 
 
-## 📊 État d'avancement (Journal de bord)
-
-- [x] Jalon 1 : Cahier des charges et structure de base.
-- [x] Jalon 2 : Logique principale fonctionnelle.
-- [x] Jalon 3 : Interface graphique finale.
-- [x] Jalon 4 : Vidéo de démonstration et tests unitaires.
 
 ## 📸 Captures d'écran
 >
