@@ -1,5 +1,5 @@
 ---
-Auteur: VUADELLE Corto
+Auteur: VUADELLE Corto, DAMON Alexandre, LEONARD Sacha
 title: README pour les trophées NSI 
 tags: trophées NSI, lycée
 ---
