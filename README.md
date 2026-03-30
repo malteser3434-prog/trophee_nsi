@@ -11,9 +11,7 @@ tags: trophées NSI, lycée
 Notre projet est un arg. Son objectif est de proposer une expérience unique au joueur. Mais à travers cette expérience, notre équipe veut passer un message fort, celui d'un monde au bord du gouffre condanmé par des ia devenues autonomes et puissantes. On laisse au joueur une vision personnelle de notre seul et unique monde, détruit par les plus grands.
 A chaque seconde de nos vies, des personnes meurent, ou doivent quitter leurs terres natales à cause de changement climatique. Et à coté de cela, les plus grand de ce monde, s'acharnent à le détruire pour leurs intérêts personnels. Malgré tout, la fin du jeu pousse le joueur a faire un dilemme (Petite option de rejouabilité), l'histoire est d'ailleurs volontairement floue sur certains aspect pour provoquer l'imagination du joueur et peut etre le partage entre les joueurs. 
 Il répond aux critères d'originalité des Trophées NSI, car il traite de l'environnement, et mobilise la curiosité du joueur dans une experience que nous pensons peu commune. 
-- Quel est l'objectif ?
-- Pourquoi avez-vous choisi ce sujet ?
-- En quoi répond-il aux critères d'originalité ou d'utilité des Trophées NSI ?
+
 
 ## 👥 L'Équipe
 
