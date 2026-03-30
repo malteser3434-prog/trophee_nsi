@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARG — Accueil</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Écran de boot -->
+    <div id="bootScreen">
+      <p id="bootText"></p>
+      <span class="curseur">█</span>
+    </div>
+
+    <!-- Page principale (cachée au départ) -->
+    <div id="mainContent">
+      <!-- HUD date/heure -->
+      <div id="hud">
+        <!--DATE : <span id="hudDate">--/--/----</span> &nbsp;|&nbsp; HEURE : 
+        <span id="hudTime">--:--</span>-->
+      </div>
+
+      <!-- Titre -->
+      <h1 id="titre">AÉLLO-S</h1>
+      <p id="soustitre">// Une histoire commence ici //</p>
+
+      <!-- Résumé -->
+      <div id="resume">
+        <p class="prompt">$ cat mission.txt</p>
+        <p>
+          DQ 2076, O'kxpdqlwh ylw frqilqh hq vrxv-vro ghsxlv txhotxhv dqqhhv srxu hylwhu ohv fdwdvwurskhv qdwxuhoohv txl vhfrxhqw od whuuh txrwlglhqqhphqw hw ohv whpshudwxuhv hawuhphv. Vhxov ohv vflhqwliltxhv, hw oh jrxyhuqhqw rqw dffhv dxa lqiudvwuxfwxuhv gh o'dqflhq prqgh. Od Iudqfh, soxv txh q'lpsruwh txho qdwlrq, hvvdbh gh frpsuhqguh hw gh pdlwulvhu oh srxyrlu ghv LD, ghyhqxhv dxwrqrphv hw suryrtxdqwv ohv fdwdvwurskhv.
+        </p>
+        <p>
+          Yrwuh uroh hvw gh uhfxshuhu xqh ld uhyroxwlrqqdluh gdqv xqh edvh plolwdluh srxu oh jrxyhuqhphqw dphulfdlq txl srxuudlw frqwurohu oh folpdw hw fkdqjhu oh frxuv gh o'klvwrluh, Erqqh fkdqfh djhqw. /ylhz srxu frpphqfhu
+        </p>
+        <p>
+          <em> </em>
+        </p>
+      </div>
+
+      
+   
+
+    <div id="tips">
+      <a>
+        Conseil d'utilisiation : pour une meilleure expérience, utilisez un
+        navigateur moderne, placez vous en plein écran grâce à la touche F11.
+      </a>
+    </div>
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+  </body>
+</html>

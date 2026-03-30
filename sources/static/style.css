@@ -1,0 +1,190 @@
+/* Police pixel depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap');
+
+/* ---- Base ---- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0a0000;
+  background-image: url('../img/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #f5e6c8;
+  font-family: 'Share Tech Mono', monospace;
+  min-height: 100vh;
+}
+
+/* Assombrit l'image de fond */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 0;
+}
+
+/* ---- Écran de boot ---- */
+#bootScreen {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+}
+
+#bootText {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1rem;
+  color: #00ff41;
+  line-height: 2;
+  white-space: pre-line;
+}
+
+.curseur {
+  color: #00ff41;
+  font-size: 1.2rem;
+  animation: clignoter 0.8s step-end infinite;
+}
+
+/* ---- Page principale ---- */
+#mainContent {
+  position: relative;
+  z-index: 1;
+  display: none; /* affiché par le JS après le boot */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem 4rem;
+  min-height: 100vh;
+}
+
+/* ---- HUD ---- */
+#hud {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.8rem;
+  color: #00ff41;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0.4rem 1rem;
+  margin-bottom: 3rem;
+  align-self: flex-start;
+}
+
+/* ---- Titre ---- */
+#titre {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(1rem, 3vw, 1.8rem);
+  color: #f5e6c8;
+  text-shadow: 3px 3px 0 #7b0000;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+#soustitre {
+  font-size: 0.9rem;
+  color: #c0392b;
+  letter-spacing: 0.2em;
+  margin-bottom: 3rem;
+}
+
+/* ---- Bloc résumé ---- */
+#resume {
+  max-width: 680px;
+  background: rgba(0, 0, 0, 0.75);
+  border: 2px solid #7b0000;
+  padding: 1.5rem 2rem;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+#resume p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: #e0cca8;
+}
+
+#resume p:last-child {
+  margin-bottom: 0;
+}
+
+.prompt {
+  color: #00ff41 !important;
+  margin-bottom: 1rem !important;
+}
+
+/* ---- Bouton ---- */
+#bouton {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.7rem;
+  color: #f5e6c8;
+  background: #7b0000;
+  border: 3px solid #c0392b;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  /* Ombre pixel */
+  box-shadow: 4px 4px 0 #000;
+  transition: background 0.1s, transform 0.1s, box-shadow 0.1s;
+}
+
+#bouton:hover {
+  background: #c0392b;
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000;
+}
+
+#bouton:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000;
+}
+
+/* ---- Hint ---- */
+#hint {
+  font-size: 0.75rem;
+  color: rgba(245, 230, 200, 0.35);
+  letter-spacing: 0.1em;
+  animation: pulser 2.5s ease-in-out infinite;
+}
+
+/* ---- Animations ---- */
+@keyframes clignoter {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes pulser {
+  0%, 100% { opacity: 0.35; }
+  50%       { opacity: 0.8; }
+}
+
+#tips {
+  position: fixed;
+  bottom: 1.2rem;
+  left: 1.2rem;
+  z-index: 50;
+
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid #7b0000;
+  border-left: 3px solid #c0392b;
+  padding: 0.6rem 1rem;
+  max-width: 340px;
+}
+
+#tips a {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.72rem;
+  color: rgba(245, 230, 200, 0.6);
+  line-height: 1.7;
+}
+
+
+

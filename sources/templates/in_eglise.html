@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ARG - Accueil</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='in_eglise.css') }}">
+
+</head>
+
+<body>
+  <a href="/front_eglise" class="front-eglise">front_eglise</a>
+  <div class="game-container">
+    <img id="background-img"
+      src="{{ url_for('static', filename='pics/' + ('in_eglise_px_no_clipboard.png' if 'clipboard' in session else 'in_eglise_px.png')) }}"
+      data-empty="{{ url_for('static', filename='pics/in_eglise_px_no_clipboard.png') }}">
+
+    {% if 'clipboard' not in session.get('inventory', []) %}
+    <div id="clip-eglise" class="objet-interactif" onclick="ramasserObjet('clipboard')"></div>
+    {% endif %}
+  </div>
+
+  <button class="notebook-btn {% if 'clipboard' not in session.get('inventory', []) %}hidden{% endif %}">
+    <img src="{{ url_for('static', filename='pics/mini-clipboard.png') }}" style="width: 50px;">
+  </button>
+
+  <!-- HUD -->
+
+  <div class="mission-hud">
+    <p>DATE : 11/02/2026</p>
+    <p>HEURE : 19:57</p>
+    <p>LIEU : Lyon - Les Alentours</p>
+  </div>
+
+  <button class="notebook-btn {% if 'clipboard' not in session.get('inventory', []) %}hidden{% endif %}">
+    <img src="{{ url_for('static', filename='pics/mini-clipboard.png') }}" style="width: 50px;">
+  </button>
+
+  <div class="notebook" style="display: none;">
+    <div class="close-btn">✖</div>
+    <textarea class="notebook-text"></textarea>
+  </div>
+
+  <!-- JS Flask -->
+  <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+
+</body>
+
+</html>

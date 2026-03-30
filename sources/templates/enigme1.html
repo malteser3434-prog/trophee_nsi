@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Énigme 1</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='enigme_1.css') }}"
+    />
+  </head>
+
+  <body>
+    <a href="/inside_car" class="inside_car"></a>
+
+    <button class="notebook-btn">
+      <img
+        src="{{ url_for('static', filename='pics/mini-clipboard.png') }}"
+        style="width: 50px"
+      />
+    </button>
+
+    <div class="mission-hud">
+      <p>DATE : 12/02/2026</p>
+      <p>HEURE : 10:48</p>
+      <p>LIEU : Lyon - Place centrale</p>
+    </div>
+
+    <div class="notebook" style="display: none">
+      <div class="close-btn">✖</div>
+      <textarea
+        class="notebook-text"
+        placeholder="Écris ici tes pistes..."
+      ></textarea>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+  </body>
+</html>

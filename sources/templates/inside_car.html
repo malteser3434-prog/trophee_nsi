@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Car</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='inside_car.css') }}"
+    />
+  </head>
+
+  <body>
+    <div class="mission-hud">
+      <p>DATE : 12/02/2026</p>
+      <p>HEURE : 10:50</p>
+      <p>LIEU : Lyon - Place centrale</p>
+    </div>
+
+    <div class="conteneur-enigme">
+      <h1 class="titre">Direction</h1>
+
+      <p>Entre les coordonnées de votre destination.</p>
+
+      <form method="POST">
+        <input type="text" name="reponse" placeholder="Ta réponse ?" />
+        <button type="submit">Valider</button>
+      </form>
+
+      {% if message %}
+      <p class="feedback">> {{ message }}</p>
+      {% endif %}
+    </div>
+
+    <div id="interractions">
+      <a>
+        Veuillez entrer les coordonnées de votre destination pour continuer
+        votre voyage.
+      </a>
+    </div>
+
+    <button class="notebook-btn">
+      <img
+        src="{{ url_for('static', filename='pics/mini-clipboard.png') }}"
+        style="width: 50px"
+      />
+    </button>
+
+    <div class="notebook" style="display: none">
+      <div class="close-btn">✖</div>
+      <textarea
+        class="notebook-text"
+        placeholder="Écris ici tes pistes..."
+      ></textarea>
+    </div>
+
+    <!-- JS Flask -->
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+  </body>
+</html>

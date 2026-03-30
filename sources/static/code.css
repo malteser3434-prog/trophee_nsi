@@ -1,0 +1,119 @@
+body{ 
+  margin: 0;
+  width: 100vw; 
+  height: 100vh; 
+  background-image: url("/static/pics/code.png") !important; 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  overflow: hidden;
+}
+
+.titre {
+  font-family: monospace;
+}
+
+.notebook-btn {
+      display: none;
+      position: fixed;
+      right: 1%;
+      /*background: #ff0066;*/
+      background: url("pics/mini-clipboard.png");
+      background-size: cover;
+      color: black;
+      border: none;
+      padding: 3% 12%;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 6px;
+      width: 11%;
+}
+
+#interractions {
+  position: fixed;
+  bottom: 65%;
+  left: 30%;
+  z-index: 50;
+
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid #1c11b8;
+  border-left: 3px solid #4f1cda;
+  padding: 0.6rem 1rem;
+  max-width: 340px;
+}
+
+#interractions a {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.72rem;
+  color: rgba(245, 230, 200, 0.6);
+  line-height: 1.7;
+}
+
+.conteneur-enigme {
+    /* --- C'EST ICI QUE TU CHANGES LA POSITION --- */
+    position: absolute; 
+    top: 75%;  /* Ajuste la distance du haut (ex: 50px, 20%, etc.) */
+    left: 42%; /* Ajuste la distance de la gauche */
+    /* -------------------------------------------- */
+
+    background-color: rgba(26, 26, 26, 0.9);
+    color: white;
+    padding: 25px;
+    border: 1px solid rgb(38, 0, 255);
+    border-radius: 10px;
+    width: 320px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    font-family: sans-serif;
+  }
+
+  .titre {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: rgb(38, 0, 255);
+  }
+
+  .feedback {
+    color: rgb(47, 0, 255); 
+    font-family: monospace; 
+    margin-top: 20px;
+  }
+
+  .erreur {
+    color: #ff4d4d; /* Rouge */
+    font-weight: bold;
+}
+
+.succes {
+    color: #4dff88; /* Vert */
+    font-weight: bold;
+}
+
+
+.fence {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  color: #3D3D3D;
+  background: #fff;
+  border: none;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.fence:focus {
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
+
+.valider{
+   position: absolute; 
+    top: 27%;  /* Ajuste la distance du haut (ex: 50px, 20%, etc.) */
+    right: 1%;
+    width: 20%;
+    height: 24%;
+}

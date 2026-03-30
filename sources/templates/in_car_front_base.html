@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ARG - Accueil</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='in_car_front_base.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+
+<body>
+
+  <a href="/front_base" class="in-eglise"></a>
+
+  <div class="mission-hud">
+    <p>DATE : 12/02/2026</p>
+    <p>HEURE : 17:32</p>
+    <p>LIEU : Lyon - Base militaire</p>
+  </div>
+
+  <button class="notebook-btn">
+    <img src="{{ url_for('static', filename='pics/mini-clipboard.png') }}" style="width: 50px;">
+  </button>
+
+  <div class="notebook" style="display: none;">
+    <div class="close-btn">✖</div>
+    <textarea class="notebook-text" placeholder="Écris ici tes pistes..."></textarea>
+  </div>
+
+  <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+
+</body>
+
+</html>

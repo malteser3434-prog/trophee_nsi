@@ -1,0 +1,117 @@
+
+body{ 
+  margin: 0;
+  width: 100vw; 
+  height: 100vh; 
+  background-image: url("/static/pics/front_base_open.png") !important; 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  overflow: hidden;
+}
+
+.mission-hud {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.8); /* Fond noir bien sombre */
+    color: #00ff00; /* Vert lime */
+    padding: 15px;
+    border: 1px solid lime; /* Encadré vert */
+    font-family: monospace; /* Style console de code */
+    font-size: 14px;
+    z-index: 999;
+    pointer-events: none; /* Pour que le bloc ne bloque pas les clics derrière lui */
+}
+
+.in-eglise{
+  position: absolute;
+
+  /* 🎯 Position approximative de la porte */
+  left: 5%;
+  top: 5%;
+
+  /* 🎯 Taille de la zone cliquable */
+  width: 90%;
+  height: 75%;
+
+  /* visible pour réglage */
+  color: white;
+  text-align: center;
+  line-height: 18vh;
+}
+
+.notebook-btn {
+      display: none;
+      position: fixed;
+      bottom: 0.1%;
+      right: 1%;
+      /*background: #ff0066;*/
+      background: url("pics/mini-clipboard.png");
+      background-size: cover;
+      color: black;
+      border: none;
+      padding: 3% 12%;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 6px;
+      width: 11%;
+}
+
+.notebook-btn.visible {
+    display: block !important;
+}
+
+    /* Carnet */
+.notebook {
+    position: fixed;
+    bottom: 0.1%;
+    right: 0.1%;
+    width: 25%;
+    height: 55%;
+    /*background: #111;*/
+    background: url("pics/Clipboard-feuille.png");
+    background-size: 105%;
+    display: none;
+    flex-direction: column;
+    border: #bb00ff;
+    background-repeat: no-repeat  ;
+}
+
+.close-btn {
+  position: absolute;
+  color: white;
+  -webkit-text-stroke: 2.5px black;
+  top: 8%;
+  right: 7%;
+  cursor: pointer;
+  font-size: 250%;
+  user-select: none;
+}
+
+.notebook-text {
+  flex: 1;
+  background: none;
+  overflow: hidden;      /* enlève la barre de défilement */
+  overflow-y: hidden;
+  color: black;
+  margin-top: 31.8%;
+  margin-bottom: 8.7%;
+  margin-left: 15%;
+  margin-right: 13%;
+  line-height: 134.8%;
+  border: none;
+  resize: none;
+  padding: 10px;
+  font-family: monospace;
+  outline: none;
+  background-repeat: no-repeat;
+}
+
+
+
+.mission-hud p {
+    margin: 5px 0; /* Espace entre les lignes */
+    text-transform: uppercase; /* Tout en majuscules pour le style mission */
+}
+

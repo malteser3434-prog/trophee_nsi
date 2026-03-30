@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Car</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='code.css') }}"
+    />
+  </head>
+
+  <body>
+    <div class="conteneur-enigme">
+      <h1 class="titre">Code</h1>
+
+      <p>Entre le code a 5 chiffres</p>
+
+      <form method="POST">
+        <input type="text" name="reponse" placeholder="Ta réponse ?" />
+        <button class="valider" type="submit">Valider</button>
+      </form>
+
+      {% if message %}
+      <p class="feedback">> {{ message }}</p>
+      {% endif %}
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+  </body>
+</html>

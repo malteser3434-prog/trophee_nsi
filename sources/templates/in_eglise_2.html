@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ARG - Accueil</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='in_eglise.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+
+<body>
+
+  <a href="/in_eglise_clipboard" class="in-eglise">clipboard</a>
+
+  <div class="game-container">
+
+    {% if 'clipboard' not in session.get('inventory', []) %}
+    <div id="clip-eglise" class="objet-interactif" onclick="clicSurClipboard()"></div>
+    {% endif %}
+  </div>
+
+  <button  class="notebook-btn {% if 'clipboard' not in session.get('inventory', []) %}hidden{% endif %}">
+    <img src="{{ url_for('static', filename='pics/mini-clipboard.png') }}" style="width: 50px;">
+  </button>
+
+  <div class="mission-hud">
+    <p>DATE : 12/02/2026</p>
+    <p>HEURE : 9:20</p>
+    <p>LIEU : Lyon - Eglise</p>
+  </div>
+
+  <button class="notebook-btn">
+    <img src="{{ url_for('static', filename='pics/mini-clipboard.png') }}" style="width: 50px;">
+  </button>
+
+  <div class="notebook" style="display: none;">
+    <div class="close-btn">✖</div>
+    <textarea class="notebook-text" placeholder="Écris ici tes pistes..."></textarea>
+  </div>
+
+  <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ARG - Accueil</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='chemin.css') }}">
+
+</head>
+
+<body>
+
+  <a href="/enigme1" class="centre_ville"></a>
+  <a href="/front_eglise" class="eglise"></a>
+  <!-- HUD -->
+
+  <div class="mission-hud">
+    <p>DATE : 12/02/2026</p>
+    <p>HEURE : 04:35</p>
+    <p>LIEU : Lyon - Les Alentours</p>
+  </div>
+
+  <button class="notebook-btn">
+    <img src="{{ url_for('static', filename='pics/mini-clipboard.png') }}" style="width: 50px;">
+  </button>
+
+  <div class="notebook" style="display: none;">
+    <div class="close-btn">✖</div>
+    <textarea class="notebook-text" placeholder="Écris ici tes pistes..."></textarea>
+  </div>
+
+  <!-- JS Flask -->
+  <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+
+</body>
+
+</html>

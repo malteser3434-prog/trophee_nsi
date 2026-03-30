@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ARG - Accueil</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='view.css') }}">
+
+</head>
+
+<body>
+
+  <a href="/chemin" class="chemin"></a>
+
+  <!-- HUD -->
+
+  <div class="mission-hud">
+    <p>DATE : 11/02/2076</p>
+    <p>HEURE : 18:47</p>
+    <p>LIEU : Lyon - Les Alentours</p>
+  </div>
+
+  <button class="notebook-btn">
+    <img src="{{ url_for('static', filename='pics/mini-clipboard.png') }}" style="width: 50px;">
+  </button>
+
+  <div class="notebook" style="display: none;">
+    <div class="close-btn">✖</div>
+    <textarea class="notebook-text" placeholder="Écris ici tes pistes..."></textarea>
+  </div>
+
+  <!-- JS Flask -->
+  <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+
+</body>
+
+</html>
