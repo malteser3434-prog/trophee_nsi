@@ -58,4 +58,4 @@ Comme nous voulons conserver un peu de mystère par rapport a notre projet, nous
 
 ## 📜 Licence
 
-Ce projet est sous licence [MIT/GNU GPL].
+Ce projet est sous licence GNU.
