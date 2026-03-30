@@ -1,1 +1,16 @@
-@TaLeon
+# --- Core ---
+python>=3.13.0
+Flask==3.1.2
+
+# --- Serveur & Déploiement ---
+gunicorn==23.0.0      # Serveur HTTP WSGI pour la production
+python-dotenv==1.0.1  # Pour gérer les variables d'environnement (.env)
+
+# --- Utilitaires pour un ARG ---
+Flask-SQLAlchemy==3.1.1  # Si tu as besoin d'une base de données (scores, indices)
+Flask-WTF==1.2.1         # Pour gérer les formulaires (entrées de codes/mots de passe)
+jinja2==3.1.4            # Moteur de template (installé avec Flask, mais bon à fixer)
+Werkzeug==3.1.3          # Bibliothèque WSGI sous-jacente
+
+# --- Sécurité & Fichiers ---
+itsdangerous==2.2.0      # Pour générer des jetons sécurisés (liens cryptés)
