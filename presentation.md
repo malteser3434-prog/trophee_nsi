@@ -45,6 +45,8 @@ La principale difficulté a été la gestion de l'état du jeu côté serveur. L
 De nombreuses pistes d'amélioration sont envisageables. L'ajout d'une bande sonore d'ambiance renforcerait l'immersion (Nous en avions une composée par corto mais qui ne correspondait pas vraiment à l'ambiance). Nous aimeriont également mettre un système de sauvegarde de progression pour permettre permettant au joueur de reprendre sa partie. Enfin, davantage de scènes intermédiaires, d'énigmes et d'objets ramassables enrichiraient énormément la narration et allongeraient l'expérience de jeu comme prévu au départ.
 Nous avons quelques regret concernant ce projet qui aurait pu etre plus abouti mais nous sommes quand meme très fier d'avoir créé cette ARG original et prometteur (nous reprendrons le projet par la suite) et surtout nous sommes très contents d'avoir pu participer à ce concours qui nous a énormément apporté sur le plan technique (Flask, HTML, CSS), sur le plan créatif (Histoire) et sur le plan social (résponsabilité, répartition et amitié !). 
 
+Comme nous voulons conserver un peu de mystère par rapport a notre projet, nous vous invitons a le découvrir par vous-mêmes pour une meilleure immersion. Nous vous encourageons d'ailleurs a bien fouiller partout surtout dans les poubelles et dans les fichiers. 
+
 Nous espérons sincèrement que ce projet vous plairera et nous vous remercions pour votre temps. 
 Toute l'équipe 
 
