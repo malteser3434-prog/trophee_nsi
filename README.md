@@ -44,18 +44,51 @@ Expliquez comment tester votre projet :
 
 Le projet est une création originale malheureusement pas aussi aboutie que nous l'aurions souhaité (lore, éngimes...) mais qui reste une expérience que nous trouvons divertissante et qui apporte un peu de fraicheur. Nous avons eu recours à l'Intelligence artifiecelle pour la création de certaines images, certaines ont etes pyxelisées pour reduire un peu la generation d'image couteuse en eau/éléctricité. L'IA n'a pas été un outil créatif dans le sens de l'histoire ou des énigmes mais nous as servis pour generer du code et optimiser notre temps. De ce fait, nous estimons la part de l'IA dans notre projet de 40 %. 
 
-## 📊 État d'avancement (Journal de bord)
 
-- [x] Jalon 1 : Cahier des charges et structure de base.
-- [x] Jalon 2 : Logique principale fonctionnelle.
-- [x] Jalon 3 : Interface graphique finale.
-- [x] Jalon 4 : Vidéo de démonstration et tests unitaires.
-
-## 📸 Captures d'écran
->
 Comme nous voulons conserver un peu de mystère par rapport a notre projet, nous vous invitons a le découvrir par vous-mêmes pour une meilleure immersion. Nous vous encourageons d'ailleurs a bien fouiller partout surtout dans les poubelles et dans les fichiers !
->
 
-## 📜 Licence
 
-Ce projet est sous licence GNU.
+
+
+Pour plus d'information sur notre projet, n'hésitez pas à lire attentivement le fichier presentation qui est très complet et structuré. 
+**Pré-requis**
+
+-Python 3.10 ou supérieur
+-bibliothèque Flask
+-Navigateur moderne (+ accès à Internet) 
+-Accès aux fichiers du jeu et accès à la modification des fichiers du jeu (Ex: via VS Code) 
+
+**Installation**
+
+-Clonez le dépôt
+-Telechargez le fichier sources 
+-Ouvrir ce fichier avec un logiciel adapté (Ex: VS Code encore) 
+-Installer les bibliothèques/dépendances
+
+**Démarrage**
+
+Une fois ces étapes réalisées : 
+-Se rendre à l'URL du serveur local (Ex: http://localhost:5000) à l'aide d'un navigateur moderne (conseil utiliser F11 pour une meilleure experience) 
+-Commencer à jouer et se préparer à passer un excellent moment ! 
+
+**Fabriqué avec**
+
+-Pyhton
+-Flask
+-Jinja2
+-HTML
+-CSS
+-Outils de retouche photo
+
+**Versions**
+
+-Flask 3.x
+-Python 3.10+
+
+**Auteurs**
+
+DAMON Alexandre, LEONARD Sacha, VUADELLE Corto
+
+**License**
+
+Ce projet est sous licence GNU - voir le fichier LICENSE pour plus d'informations.
